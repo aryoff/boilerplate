@@ -1,0 +1,3 @@
+[submodule "Modules/Wfm"]
+	path = Modules/Wfm
+	url = https://github.com/aryoff/boilerplate_module_Wfm.git

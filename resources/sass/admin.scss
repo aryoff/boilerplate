@@ -1,0 +1,10 @@
+@import '~multiselect/scss/multi-select';
+
+.ms-container {
+    width: 100%;
+}
+
+.ms-container .ms-selectable,
+.ms-container .ms-selection {
+    background: transparent;
+}

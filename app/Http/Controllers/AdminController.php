@@ -33,13 +33,17 @@ class AdminController extends Controller
         foreach ($modules as $module) {
             $jsonString = file_get_contents(base_path('Modules'.DIRECTORY_SEPARATOR.$module->getName().DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'parameter.json'));
             $data = json_decode($jsonString, true);
+            if ($this->key_exist_inarray('name',$data) == null) {
+                $nama = $module->getName();
+            } else {
+                $nama = $this->key_exist_inarray('name',$data);
+            }
             $container[] = [
-                'name' => $this->key_exist_inarray('name',$data),
+                'name' => $nama,
                 'value' => $module->getLowerName(),
                 'require' => $this->key_exist_inarray('require',$data),
             ];
         }
-
         return $container;
     }
     public function module_list()

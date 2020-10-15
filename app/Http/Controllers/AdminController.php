@@ -19,26 +19,34 @@ class AdminController extends Controller
     {
         return view('admin.modules');
     }
+    function key_exist_inarray($key, $search_array)
+    {
+        if (array_key_exists($key, $search_array)) {
+            return $search_array[$key];
+        } else {
+            return null;
+        }
+    }
+    function get_json_parameter($modules)
+    {
+        $container = [];
+        foreach ($modules as $module) {
+            $jsonString = file_get_contents(base_path('Modules'.DIRECTORY_SEPARATOR.$module->getName().DIRECTORY_SEPARATOR.'Config'.DIRECTORY_SEPARATOR.'parameter.json'));
+            $data = json_decode($jsonString, true);
+            $container[] = [
+                'name' => $this->key_exist_inarray('name',$data),
+                'value' => $module->getLowerName(),
+                'require' => $this->key_exist_inarray('require',$data),
+            ];
+        }
+
+        return $container;
+    }
     public function module_list()
     {
-        $enabled = []; $disabled = [];
-        foreach (Module::allEnabled() as $module) {
-            $enabled[] = [
-                'name' => config($module->getLowerName().'.name'),
-                'value' => $module->getLowerName(),
-                'require' => config($module->getLowerName().'.require'),
-            ];
-        }
-        foreach (Module::allDisabled() as $module) {
-            $disabled[] = [
-                'name' => config($module->getLowerName().'.name'),
-                'value' => $module->getLowerName(),
-                'require' => config($module->getLowerName().'.require'),
-            ];
-        }
         $data = [
-            'enabled' => $enabled,
-            'disabled' => $disabled,
+            'enabled' => $this->get_json_parameter(Module::allEnabled()),
+            'disabled' => $this->get_json_parameter(Module::allDisabled()),
         ];
         return $data;
     }

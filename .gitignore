@@ -13,3 +13,4 @@ Homestead.yaml
 modules_statuses.json
 npm-debug.log
 yarn-error.log
+debug.log

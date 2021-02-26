@@ -1,7 +1,7 @@
 /Modules/*
 !/Modules/.gitignore
 /node_modules
-/public
+/public/*
 !/public/.htaccess
 !/public/favicon.ico
 !/public/index.php

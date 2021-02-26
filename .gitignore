@@ -1,9 +1,12 @@
-/Modules/*|.gitignore
+/Modules/*
+!/Modules/.gitignore
 /node_modules
-/public/hot
-/public/storage
-/public/dist
-/public/fonts
+/public
+!/public/.htaccess
+!/public/favicon.ico
+!/public/index.php
+!/public/robots.txt
+!/public/web.config
 /storage/*.key
 /vendor
 .env

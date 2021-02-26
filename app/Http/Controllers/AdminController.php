@@ -6,6 +6,8 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 use Nwidart\Modules\Facades\Module;
 
 
@@ -82,7 +84,7 @@ class AdminController extends Controller
     {
         Validator::make($request->all(), [
             'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:core_users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ])->validate();
 
@@ -92,5 +94,14 @@ class AdminController extends Controller
             'password' => Hash::make($request['password']),
         ]);
 
+    }
+
+    public function role_create(Request $request)
+    {
+        Validator::make($request->all(), [
+            'name' => ['required', 'string', 'max:255'],
+        ])->validate();
+
+        return $role = Role::create(['name' => $request['name']]);
     }
 }

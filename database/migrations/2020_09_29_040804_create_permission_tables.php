@@ -32,6 +32,11 @@ class CreatePermissionTables extends Migration
             $table->string('name');
             $table->string('guard_name');
             $table->timestamps();
+            if (env('DB_CONNECTION',false) == 'pgsql') {
+                $table->jsonb('additional_data')->nullable();
+            } else {
+                $table->json('additional_data')->nullable();
+            }
         });
 
         Schema::create($tableNames['model_has_permissions'], function (Blueprint $table) use ($tableNames, $columnNames) {
@@ -64,6 +69,7 @@ class CreatePermissionTables extends Migration
 
             $table->primary(['role_id', $columnNames['model_morph_key'], 'model_type'],
                     'model_has_roles_role_model_type_primary');
+            $table->softDeletes('deleted_at', 0);
         });
 
         Schema::create($tableNames['role_has_permissions'], function (Blueprint $table) use ($tableNames) {

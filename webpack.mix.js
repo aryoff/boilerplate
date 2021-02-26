@@ -24,4 +24,10 @@ mix.js('resources/js/app.js', 'public/js')
     .sass('resources/sass/app.scss', 'public/css')
     .sass('resources/sass/admin.scss', 'public/css')
     .copy('resources/assets/images', 'public/images')
-    .browserSync('http://localhost:8000');
+    .browserSync('http://localhost:8000')
+    .disableNotifications();
+
+if (mix.inProduction()) {
+    mix.version().disableNotifications();
+}
+    

@@ -23,11 +23,11 @@ Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
 // Route::get('/modules', 'AdminController@modules')->middleware('can:isAdmin');
 Route::middleware('can:isAdmin')->prefix('admin')->name('admin.')->group(function () {
     Route::get('#', function () {})->name('#');
-    Route::get('roles', 'App\Http\Controllers\AdminController@roles')->name('roles');
     Route::get('/module', 'App\Http\Controllers\AdminController@module_list');
     Route::post('/module', 'App\Http\Controllers\AdminController@module_store');
     Route::get('/user', 'App\Http\Controllers\AdminController@user_list');
     Route::post('/user', 'App\Http\Controllers\AdminController@user_create');
+    Route::post('/role', 'App\Http\Controllers\AdminController@role_create');
     Route::get('{any?}', function ($any = null) {
         return view('home');
     })->where('any', '.*');

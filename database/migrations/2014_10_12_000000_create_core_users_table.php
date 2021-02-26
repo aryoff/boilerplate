@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUsersTable extends Migration
+class CreateCoreUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,19 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('core_users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('is_admin', ['false', 'true'])->default('false');
-            $table->timestamp('expired_at')->nullable();
+            $table->softDeletes('deleted_at', 0);
+            if (env('DB_CONNECTION',false) == 'pgsql') {
+                $table->jsonb('socialite')->nullable();
+            } else {
+                $table->json('socialite')->nullable();
+            }
             $table->rememberToken();
             $table->timestamps();
         });
@@ -33,6 +38,6 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('core_users');
     }
 }

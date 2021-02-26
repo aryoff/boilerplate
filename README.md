@@ -3,10 +3,15 @@
 - spatie/laravel-permission
 - staudenmeir/laravel-cte
 
-## Module
-Repo ini menggunakan submodule, untuk clone pertama gunakan *git clone --recursive <project url>*
-
-## Module Rules
+# Module Rules
+## Laravel 8 Note
+Di ServiceProvider, comment line 
+```
+$this->registerFactories();
+```
+untuk kompatibilitas
+## Config
+Tambahkan *parameter.json* di dalam folder Config
 ## Views
 Untuk menampilkan menu, tambahkan menuitems.blade.php di dalam views/layouts, dengan format
 ```

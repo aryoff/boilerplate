@@ -26,10 +26,10 @@
                                 </router-link>
                             </li>
                             <li class="nav-item">
-                                <a href="roles" class="nav-link">
+                                <router-link tag="a" to="/roles" class="nav-link">
                                     <i class="far fa-circle nav-icon"></i>
-                                    <p>Role and Permissions</p>
-                                </a>
+                                    <p>Roles</p>
+                                </router-link>
                             </li>
                             <li class="nav-item">
                                 <router-link tag="a" to="/modules" class="nav-link">

@@ -1,10 +1,16 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
-    "/js/admin.js": "/js/admin.js",
-    "/css/vendor.css": "/css/vendor.css",
-    "/css/admin.css": "/css/admin.css",
-    "/js/manifest.js": "/js/manifest.js",
-    "/js/vendor.js": "/js/vendor.js",
-    "/js/sparkline.js": "/js/sparkline.js"
+    "/js/mizuvoip.js": "/js/mizuvoip.js?id=e2576f06cf9ebc983233",
+    "/css/mizuvoip.css": "/css/mizuvoip.css?id=d41d8cd98f00b204e980",
+    "/webphone_api.js": "/webphone_api.js?id=e4492897d6eadf103f79",
+    "/webphone_config.js": "/webphone_config.js?id=62e304b2a7ebffffc766",
+    "/css/softphone/pmodal.css": "/css/softphone/pmodal.css?id=0edf4b80af0c903c053f",
+    "/css/video.css": "/css/video.css?id=12b784f883900a635e13",
+    "/js/admin.js": "/js/admin.js?id=1d631932adfa80ae258d",
+    "/js/app.js": "/js/app.js?id=296a4a18d2cbfee964b0",
+    "/css/vendor.css": "/css/vendor.css?id=e8aec827e749896f5d36",
+    "/css/app.css": "/css/app.css?id=bcc0abce0d9b513c7dc4",
+    "/css/admin.css": "/css/admin.css?id=6b67de8a4552a717c5ab",
+    "/js/manifest.js": "/js/manifest.js?id=7db827d654313dce4250",
+    "/js/vendor.js": "/js/vendor.js?id=7a97a32a372671f9dee4",
+    "/js/sparkline.js": "/js/sparkline.js?id=3ffd8341d66e61f94991"
 }

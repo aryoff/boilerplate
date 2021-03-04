@@ -1,9 +1,9 @@
 [submodule "Modules/MizuVOIP"]
 	path = Modules/MizuVOIP
-	url = ssh://git@github.com:aryoff/boilerplate_module_mizuvoip.git
+	ssh = git@github.com:aryoff/boilerplate_module_mizuvoip.git
 [submodule "Modules/DynamicTicket"]
 	path = Modules/DynamicTicket
-	url = ssh://git@github.com:aryoff/boilerplate_module_dynamic_ticket.git
+	ssh = git@github.com:aryoff/boilerplate_module_dynamic_ticket.git
 [submodule "Modules/Wfm"]
 	path = Modules/Wfm
-	url = ssh://git@github.com:aryoff/boilerplate_module_Wfm.git
+	ssh = git@github.com:aryoff/boilerplate_module_Wfm.git

@@ -1,9 +1,9 @@
-[submodule "Modules/Wfm"]
-	path = Modules/Wfm
-	url = https://github.com/aryoff/boilerplate_module_Wfm.git
 [submodule "Modules/MizuVOIP"]
 	path = Modules/MizuVOIP
 	url = https://github.com/aryoff/boilerplate_module_mizuvoip.git
 [submodule "Modules/DynamicTicket"]
 	path = Modules/DynamicTicket
 	url = https://github.com/aryoff/boilerplate_module_dynamic_ticket.git
+[submodule "Modules/Wfm"]
+	path = Modules/Wfm
+	url = https://github.com/aryoff/boilerplate_module_Wfm.git

@@ -1,5 +1,5 @@
 /Modules/*
-!/Modules/.gitignore
+!/Modules/.gitkeep
 /node_modules
 /public/*
 !/public/.htaccess

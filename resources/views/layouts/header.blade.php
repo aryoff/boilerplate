@@ -1,4 +1,4 @@
-        <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <nav class="main-header navbar navbar-expand navbar-dark navbar-gray-dark">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav">
                 @auth

@@ -16,5 +16,7 @@
     "/js/custom_webphone.js": "/js/custom_webphone.js?id=ca2f162cb04e42784199",
     "/js/reports.js": "/js/reports.js?id=e20e14e84492922bfce5",
     "/js/dynamicticket.js": "/js/dynamicticket.js?id=9cab63fd74da9c31c188",
-    "/css/dynamicticket.css": "/css/dynamicticket.css?id=d41d8cd98f00b204e980"
+    "/css/dynamicticket.css": "/css/dynamicticket.css?id=d41d8cd98f00b204e980",
+    "/js/wfm.js": "/js/wfm.js?id=9cab63fd74da9c31c188",
+    "/css/wfm.css": "/css/wfm.css?id=d41d8cd98f00b204e980"
 }

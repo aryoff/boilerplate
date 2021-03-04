@@ -1,5 +1,3 @@
-/Modules/*
-!/Modules/.gitkeep
 /node_modules
 public/dist/img
 public/images

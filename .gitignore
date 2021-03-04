@@ -1,12 +1,8 @@
 /Modules/*
 !/Modules/.gitkeep
 /node_modules
-/public/*
-!/public/.htaccess
-!/public/favicon.ico
-!/public/index.php
-!/public/robots.txt
-!/public/web.config
+public/dist/img
+public/images
 /storage/*.key
 /vendor
 .env

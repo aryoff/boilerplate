@@ -1,4 +1,8 @@
+    @auth
         <nav class="main-header navbar navbar-expand navbar-dark navbar-gray-dark">
+    @else
+        <nav class="main-header navbar navbar-expand navbar-light navbar-white">
+    @endauth
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav">
                 @auth

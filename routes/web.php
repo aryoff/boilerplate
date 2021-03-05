@@ -13,11 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
  */
 
-// Route::get('/', function () {return view('home');});
-
 Auth::routes();
 
 Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
+Route::view('/welcome', 'welcome')->name('welcome');
 
 // Route::get('/admin', 'AdminController@index')->name('admin')->middleware('can:isAdmin');
 // Route::get('/modules', 'AdminController@modules')->middleware('can:isAdmin');

@@ -42,8 +42,4 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
-import VueRouter from "vue-router";
-window.Vue = require('vue');
-Vue.use(VueRouter);
-
 require('overlayscrollbars');

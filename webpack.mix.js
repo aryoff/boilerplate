@@ -17,7 +17,7 @@ mix.mergeManifest();
 
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/admin.js', 'public/js')
-    .extract(['axios', 'datatables.net-bs4', 'lodash', 'moment', 'popper.js', 'jquery', 'jquery-ui-bundle', 'bootstrap', 'admin-lte', 'overlayscrollbars', 'vue', 'vue-router'])
+    .extract(['axios', 'lodash', 'moment', 'popper.js', 'jquery', 'jquery-ui-bundle', 'bootstrap', 'admin-lte', 'overlayscrollbars'])
     .copy('node_modules/sparklines/source/sparkline.js', 'public/js')
     .copy('node_modules/admin-lte/dist/img', 'public/dist/img')
     .sass('resources/sass/vendor.scss', 'public/css')

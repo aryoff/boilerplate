@@ -18,10 +18,6 @@
  * Released under the MIT License
  */
 
-/*! DataTables 1.10.23
- * ©2008-2020 SpryMedia Ltd - datatables.net/license
- */
-
 /*!@preserve
  * Tempus Dominus Bootstrap4 v5.39.0 (https://tempusdominus.github.io/bootstrap-4/)
  * Copyright 2016-2020 Jonathan Peterson and contributors

@@ -34,10 +34,10 @@
           </div>
           <div class="col-2 d-flex justify-content-center align-items-center">
             <a @click="disableModules" class="btn btn-default remove_option" rel="facilities2" id="remove">
-              <i class="fa fa-arrow-left"></i>
+              <i class="fa fa-arrow-left" aria-hidden="true" />
             </a>
             <a @click="enableModules" class="btn btn-default add_option" rel="facilities2" id="add">
-              <i class="fa fa-arrow-right"></i>
+              <i class="fa fa-arrow-right" aria-hidden="true" />
             </a>
           </div>
           <div class="col-5">

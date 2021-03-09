@@ -23,26 +23,26 @@
           <div class="col-lg-6">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">User List</h3>
+                <h3 id="tableDesc" class="card-title">User List</h3>
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
                     <input type="text" name="table_search" class="form-control float-right" placeholder="Search"/>
                     <div class="input-group-append">
                       <button type="submit" class="btn btn-default">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-search" aria-hidden="true" />
                       </button>
                     </div>
                   </div>
                 </div>
               </div>
               <div class="card-body table-responsive p-0" style="height: 300px;">
-                <table class="table table-hover">
+                <table class="table table-hover" aria-describedby="tableDesc">
                   <thead>
                     <tr>
-                      <th>ID</th>
-                      <th>User</th>
-                      <th>Email</th>
-                      <th>isAdmin</th>
+                      <th scope="col">ID</th>
+                      <th scope="col">User</th>
+                      <th scope="col">Email</th>
+                      <th scope="col">isAdmin</th>
                     </tr>
                   </thead>
                   <tbody>

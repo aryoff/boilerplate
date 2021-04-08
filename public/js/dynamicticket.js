@@ -138,7 +138,8 @@ window.addComponent = function () {
       recursiveSortable();
       recursiveInput();
     } else {
-      alert('Add Component Fail'); //TODO yg sudah di push di objContainer harus di POP
+      objContainer.pop();
+      alert('Add Component Fail');
     }
   });
 };
@@ -175,6 +176,7 @@ window.editComponent = function (index) {
 
 window.updateComponent = function (index) {
   var objComponent = obj.input[index];
+  var oldComponent = JSON.parse(JSON.stringify(obj.input[index]));
   objComponent.name = document.getElementById('componentName').value;
   objComponent.type = document.getElementById('componentType').value;
 
@@ -192,7 +194,8 @@ window.updateComponent = function (index) {
       recursiveSortable();
       recursiveInput();
     } else {
-      alert('Save Component Fail'); //TODO Old value harus di restore
+      obj.input[index] = oldComponent;
+      alert('Save Component Fail');
     }
   });
   resetComponentInput();
@@ -332,6 +335,10 @@ window.parseInput = function (item, index, log, targetId) {
         newDivCol.setAttribute('class', 'col-sm-10');
       }
 
+      if (typeof item.placeholder != 'undefined') {
+        newInput.setAttribute('placeholder', item.placeholder);
+      }
+
       newDivCol.appendChild(newInput);
       document.getElementById(targetId).appendChild(newDiv);
       dataContent.push(item.name);
@@ -417,9 +424,13 @@ window.parseInput = function (item, index, log, targetId) {
       newTextArea.setAttribute('id', item.name);
 
       if (typeof item.rows != 'undefined') {
-        newLabel.setAttribute('rows', item.rows);
+        newTextArea.setAttribute('rows', item.rows);
       } else {
-        newLabel.setAttribute('rows', 3);
+        newTextArea.setAttribute('rows', 3);
+      }
+
+      if (typeof item.placeholder != 'undefined') {
+        newTextArea.setAttribute('placeholder', item.placeholder);
       }
 
       newDivCol.appendChild(newTextArea);
@@ -428,6 +439,7 @@ window.parseInput = function (item, index, log, targetId) {
       break;
 
     case 'select':
+      //TODO tambahkan item.placeholder
       newDiv = document.createElement('div');
       newDiv.setAttribute('class', 'form-group');
       newDivRow = document.createElement('div');

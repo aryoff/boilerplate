@@ -7,6 +7,13 @@
     "/css/app.css": "/css/app.css?id=6151735710800fd1b95f",
     "/css/admin.css": "/css/admin.css?id=19cad760c5c8e42c6921",
     "/js/vendor.js": "/js/vendor.js?id=1a460ebd05cb79527ec7",
-    "/js/dynamicticket.js": "/js/dynamicticket.js",
-    "/css/dynamicticket.css": "/css/dynamicticket.css"
+    "/js/dynamicticket.js": "/js/dynamicticket.js?id=3c5b9fa08728e955bdca",
+    "/css/dynamicticket.css": "/css/dynamicticket.css?id=d41d8cd98f00b204e980",
+    "/js/custom_webphone.js": "/js/custom_webphone.js?id=e5a63cbc65a0e1051dcd",
+    "/js/mizuvoip.js": "/js/mizuvoip.js?id=9cab63fd74da9c31c188",
+    "/css/mizuvoip.css": "/css/mizuvoip.css?id=d41d8cd98f00b204e980",
+    "/webphone_api.js": "/webphone_api.js?id=e4492897d6eadf103f79",
+    "/webphone_config.js": "/webphone_config.js?id=0482ba0e20f4fbceb6bb",
+    "/css/softphone/pmodal.css": "/css/softphone/pmodal.css?id=0edf4b80af0c903c053f",
+    "/css/video.css": "/css/video.css?id=12b784f883900a635e13"
 }

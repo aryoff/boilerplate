@@ -13,6 +13,7 @@ webphone_api.parameters = {
 	//username: '',  //Optional SIP account username (usually entered by the user, but for some special use cases or quick tests you might preset it here)
 	//password: '',  //Optional SIP account password (usually entered by the user, but for some special use cases or quick tests you might preset it here)
 	//textmessaging: -1, //just an example parameter which sets the enable/disable chat/sms parameter to its default value
+	webphonebasedir: '../',
 	autostart:0,
 	loglevel: 1 //5 means detailed logs. It might be set it to 1 in production. The logs can be viewed in the browser console.
 	

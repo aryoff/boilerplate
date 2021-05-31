@@ -29,6 +29,7 @@
     <script src="{{ mix('js/vendor.js') }}"></script>
     <!-- Sparkline -->
     <script src="{{ mix('js/sparkline.js') }}"></script>
+    <script src="{{ mix('js/app.js') }}"></script>
 
 </head>
 
@@ -60,7 +61,6 @@
 
 </div>
 <!-- ./wrapper -->
-<script src="{{ mix('js/app.js') }}"></script>
 @can('isAdmin')
     <script src="{{ mix('js/admin.js') }}"></script>
 @endcan

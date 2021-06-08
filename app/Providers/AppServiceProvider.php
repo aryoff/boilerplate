@@ -2,7 +2,9 @@
 
 namespace App\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
+use Nwidart\Modules\Facades\Module;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -23,6 +25,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Blade::if('moduleenabled', function ($value) {
+            $temp_bool = false;
+            foreach (Module::allEnabled() as $module) {
+                if ($module->getName() === $value) {
+                    $temp_bool = true;
+                }
+            }
+            return $temp_bool;
+        });
     }
 }

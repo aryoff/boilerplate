@@ -21,6 +21,7 @@ class UsersSeeder extends Seeder
             'email' => 'administrator@gmail.com',
             'password' => Hash::make('password'),
             'is_admin' => 'true',
+            'additional_data' => '{"dynamicticket":{"escalation_campaign":[1]}}',
         ]);
         // $user->assignRole('super-admin');
     }
